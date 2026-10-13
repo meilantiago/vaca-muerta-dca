@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Raw Data (ignore large files)
+data/raw/
+*.csv
+
+# Processed data: keep lightweight 1.2MB parquet for live demo & Streamlit Cloud
+!data/processed/vaca_muerta_prod.parquet
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Personal Notes & Private Drafts
+*TEORIA*
+*DIVULGACION*
+*.personal.*
