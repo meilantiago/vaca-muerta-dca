@@ -24,7 +24,7 @@ env/
 data/raw/
 *.csv
 
-# Processed data: keep lightweight 1.2MB parquet for live demo & Streamlit Cloud
+# Processed data: keep lightweight 1.2MB parquet so notebooks run out of the box
 !data/processed/vaca_muerta_prod.parquet
 
 # IDE and OS

@@ -30,8 +30,12 @@ def modified_arps(t, qi, di, b, d_term):
     if b == 0:
         return exponential_decline(t, qi, di)
         
-    t_switch = (di / d_term - 1) / (b * di)
     t = np.asarray(t, dtype=float)
+    # Si la declinación inicial ya es menor o igual a la terminal, rige la exponencial desde t=0
+    if di <= d_term:
+        return exponential_decline(t, qi, d_term)
+
+    t_switch = (di / d_term - 1) / (b * di)
     q = np.zeros_like(t)
     
     hyp_mask = t <= t_switch
